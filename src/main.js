@@ -10,9 +10,11 @@ const store = createStore();
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/'}
+    { path: '/', component: App }
   ]
 });
 
 const app = createApp(App);
+app.use(store);
+app.use(router);
 app.mount('#app');
